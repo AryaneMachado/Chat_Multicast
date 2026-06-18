@@ -1,4 +1,4 @@
-# TCP-UDP-Chat
+# Chat Multicast
 
 Aplicação de chat em Java que suporta três protocolos de comunicação: TCP, UDP (unicast) e UDP Multicast. Possui interface gráfica (Swing) e um cliente via linha de comando.
 
