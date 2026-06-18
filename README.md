@@ -1,4 +1,4 @@
-# Chat Multicast
+# TCP-UDP-Chat
 
 Aplicação de chat em Java que suporta três protocolos de comunicação: TCP, UDP (unicast) e UDP Multicast. Possui interface gráfica (Swing) e um cliente via linha de comando.
 
@@ -29,13 +29,36 @@ src/br/edu/ifsuldeminas/sd/chat/
 
 ## Como executar
 
-Projeto Eclipse (sem Maven/Gradle). Para rodar:
+Projeto Eclipse (sem Maven/Gradle).
 
-1. Importe o projeto no Eclipse como "Existing Java Project"
-2. Execute a classe `ConnectionView` para abrir a interface gráfica
-3. Ou execute `Chat` (em `client/`) para usar via terminal
+### Importando o projeto
 
-Para se comunicarem, é necessário rodar uma instância em cada ponta (ou duas instâncias na mesma máquina para teste local).
+1. Abra o Eclipse
+2. Vá em `File > Import...`
+3. Selecione `General > Existing Projects into Workspace` e clique em `Next`
+4. Em "Select root directory", clique em `Browse...` e selecione a pasta `tcp-udp-chat`
+5. Marque o projeto na lista e clique em `Finish`
+
+### Executando a interface gráfica
+
+1. No `Package Explorer`, navegue até `src > br.edu.ifsuldeminas.sd.chat.view`
+2. Clique com o botão direito na classe `ConnectionView`
+3. Selecione `Run As > Java Application`
+4. Na tela que abrir, escolha o protocolo (UDP, TCP ou Multicast), preencha os campos e clique em `Entrar no Chat`
+
+Para testar a comunicação entre dois usuários, repita os passos acima em uma segunda execução (`Run As > Java Application` novamente), seja na mesma máquina ou em uma máquina diferente na mesma rede.
+
+### Executando o cliente via terminal
+
+1. No `Package Explorer`, navegue até `src > br.edu.ifsuldeminas.sd.chat.client`
+2. Clique com o botão direito na classe `Chat`
+3. Selecione `Run As > Java Application`
+4. Siga as instruções exibidas no console para escolher protocolo, portas e nickname
+
+### Configurando portas e endereços
+
+- **UDP/TCP**: cada cliente precisa de uma porta local de escuta e do IP/porta do destinatário
+- **Multicast**: todos os clientes precisam usar o mesmo endereço de grupo e a mesma porta (ver seção abaixo)
 
 ## Protocolos disponíveis
 
