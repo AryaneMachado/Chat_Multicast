@@ -1,10 +1,10 @@
 # Chat Multicast
 
-Aplicação de chat em Java que suporta três protocolos de comunicação: TCP, UDP (unicast) e UDP Multicast. Possui interface gráfica (Swing) e um cliente via linha de comando.
+Aplicação de chat em Java que suporta três protocolos de comunicação: TCP, UDP (unicast) e UDP Multicast. Possui interface gráfica (Swing) e um cliente via linha de comando. Mas a versão desse trabalho é focado na comunocação via UDP Multicast.
 
 Projeto desenvolvido para a disciplina de Sistemas Distribuídos - IFSULDEMINAS Campus Machado.
 
-## Funcionalidades
+## Funcionalidades (Foco da Entrega)
 
 - Chat em grupo via UDP Multicast
 - Cliente alternativo via terminal
@@ -57,18 +57,15 @@ Para testar a comunicação entre dois usuários, repita os passos acima em uma 
 
 ### Configurando portas e endereços
 
-- **UDP/TCP**: cada cliente precisa de uma porta local de escuta e do IP/porta do destinatário
 - **Multicast**: todos os clientes precisam usar o mesmo endereço de grupo e a mesma porta (ver seção abaixo)
 
 ## Protocolos disponíveis
 
 | Protocolo | Comunicação | Observações |
 |---|---|---|
-| TCP | Um para um | Conexão confiável, nova conexão a cada mensagem |
-| UDP | Um para um | Sem garantia de entrega ou ordem |
 | Multicast | Um para muitos | Todos os clientes do mesmo grupo recebem a mensagem |
 
-## Sobre o modo Multicast
+## Sobre o modo Multicast (Foco da Entrega)
 
 No modo Multicast, todos os clientes precisam usar o mesmo endereço de grupo e a mesma porta para se enxergarem. O endereço padrão sugerido na tela de conexão é `228.6.7.8`, mas qualquer endereço dentro da faixa `224.0.0.0` a `239.255.255.255` pode ser usado (a faixa `239.x.x.x` é a mais indicada para uso em redes locais).
 
